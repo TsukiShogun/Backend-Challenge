@@ -20,12 +20,12 @@ This project is a solution to the Looqbox Backend Challenge.
 
 ### Running with Docker
 
-1. Clone this repository:
+Clone this repository:
 
-   
-   git clone <repository-url>
-   cd <repository-directory>
-    
+```bash
+git clone <repository-url>
+cd <repository-directory>
+ ```
 To build the Docker image and run the service, execute:
     
     docker-compose up --build
