@@ -27,23 +27,23 @@ This project is a solution to the Looqbox Backend Challenge.
    cd <repository-directory>
     ```
 To build the Docker image and run the service, execute:
-    ```bash
+    
     docker-compose up --build
-    ```
+    
 The service will be accessible at http://localhost:8080.
 
 Running Locally
 
 If you prefer to run the project locally, use Gradle:
 
-./gradlew bootRun
+    ./gradlew bootRun
 
 The service will be available at http://localhost:8080.
 
 
 ---
 
-Endpoints
+## Endpoints
 
 GET /pokemons
 
@@ -55,12 +55,12 @@ Parameters:
 
 Example Response (if query is "pi"):
 
-{
-"result": [
-"pichu",
-"pikachu"
-]
-}
+    {
+    "result": [
+    "pichu",
+    "pikachu"
+    ]
+    }
 
 GET /pokemons/highlight
 
@@ -72,41 +72,41 @@ Parameters:
 
 Example Response (if query is "pi"):
 
-{
-"result": [
-{
-"name": "pichu",
-"highlight": "<pre>pi</pre>chu"
-},
-{
-"name": "pikachu",
-"highlight": "<pre>pi</pre>kachu"
-}
-]
-}
+    {
+    "result": [
+    {
+    "name": "pichu",
+    "highlight": "<pre>pi</pre>chu"
+    },
+    {
+    "name": "pikachu",
+    "highlight": "<pre>pi</pre>kachu"
+    }
+    ]
+    }
 
 ---
 
 
-How the Sorting Algorithm Works
+## How the Sorting Algorithm Works
 
 The chosen sorting algorithm is QuickSort. QuickSort is an efficient sorting algorithm that follows the "divide and conquer" approach. It works by selecting a "pivot", partitioning the list into two sublists (one with elements smaller than the pivot and another with elements greater), and then recursively sorting the sublists.
 
 Big-θ Complexity Analysis
 
-    Best Case: The complexity is θ(n log n), which occurs when the pivot divides the list into two approximately equal parts.
-    Average Case: The complexity is also θ(n log n) for random lists, which is the expected behavior for most inputs.
-    Worst Case: The complexity in the worst case is θ(n²), which occurs when the pivot chosen is always the smallest or largest element in the list, resulting in unbalanced partitions. This can happen, for example, if the list is already sorted or inversely sorted.
+Best Case: The complexity is θ(n log n), which occurs when the pivot divides the list into two approximately equal parts. 
+Average Case: The complexity is also θ(n log n) for random lists, which is the expected behavior for most inputs. 
+Worst Case: The complexity in the worst case is θ(n²), which occurs when the pivot chosen is always the smallest or largest element in the list, resulting in unbalanced partitions. This can happen, for example, if the list is already sorted or inversely sorted.
 
 Advantages:
 
-    Efficiency for large datasets: QuickSort is very efficient for large lists due to its average time complexity of θ(n log n).
-    In-place sorting: The algorithm does not require significant extra space beyond the recursion stack.
+Efficiency for large datasets: QuickSort is very efficient for large lists due to its average time complexity of θ(n log n).
+In-place sorting: The algorithm does not require significant extra space beyond the recursion stack.
 
 Disadvantages:
 
-    Not stable: The relative order of equal elements may be altered during sorting.
-    Stack overflow risk: The algorithm may cause a stack overflow if the recursion depth is too large in extreme cases (e.g., very large or already sorted lists).
+Not stable: The relative order of equal elements may be altered during sorting. 
+Stack overflow risk: The algorithm may cause a stack overflow if the recursion depth is too large in extreme cases (e.g., very large or already sorted lists).
 ---
 
 ## Bottlenecks and Proposed Solutions
