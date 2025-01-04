@@ -23,8 +23,8 @@ This project is a solution to the Looqbox Backend Challenge.
 Clone this repository:
 
 ```bash
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/TsukiShogun/Backend-Challenge/tree/main
+cd Backend-Challenge
  ```
 To build the Docker image and run the service, execute:
     
