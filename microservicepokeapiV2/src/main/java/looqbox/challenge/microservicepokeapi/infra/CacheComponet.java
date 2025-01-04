@@ -3,7 +3,8 @@ package looqbox.challenge.microservicepokeapi.infra;
 import looqbox.challenge.microservicepokeapi.exception.NullKeyException;
 import looqbox.challenge.microservicepokeapi.exception.NullValueException;
 import looqbox.challenge.microservicepokeapi.exception.CacheCleanupException;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
+
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -11,13 +12,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-@Service
-public class CacheService<K, V> {
+@Component
+public class CacheComponet<K, V> {
 
     private final Map<K, CacheItem<V>> cacheMap = new ConcurrentHashMap<>();
     private final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor();
 
-    public CacheService() {
+    public CacheComponet() {
         executorService.scheduleAtFixedRate(this::cleanUp, 1, 1, TimeUnit.MINUTES);
     }
 
